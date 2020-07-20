@@ -28,6 +28,8 @@ function processFirstItem(stringList, callback) {
  * 
  * 1. What is the difference between counter1 and counter2?
  * 
+ *      The difference is that in the code for counter1, the let variable is inside of the function therefore it cannot be accessed outside of it, and the code for counter to has the variable outside of the function so it can be accessed at any time.
+ * 
  * 2. Which of the two uses a closure? How can you tell?
  * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
@@ -38,7 +40,7 @@ function processFirstItem(stringList, callback) {
 function counterMaker() {
   let count = 0;
   return function counter() {
-   return count++;
+    return count++;
   }
 }
 
@@ -56,11 +58,14 @@ function counter2() {
 
 Write a function called `inning` that returns a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
-
-    /*Code Here*/
+function inning() {
+  min = Math.ceil(0);
+  max = Math.floor(2);
+  return Math.floor(Math.random() * (2 - 0 + 1));
 
 }
+console.log('This is for task 2:', inning());
+
 
 /* Task 3: finalScore()
 
@@ -74,9 +79,9 @@ finalScore(inning, 9) might return:
   "Away": 5,
 }
 
-*/ 
+*/
 
-function finalScore(/*code Here*/){
+function finalScore(/*code Here*/) {
 
   /*Code Here*/
 
