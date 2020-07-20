@@ -79,11 +79,20 @@ finalScore(inning, 9) might return:
 
 */
 
-function finalScore(/*code Here*/) {
+function finalScore(inning, numInnings) {
+  let home = 0;
+  let away = 0;
 
-  /*Code Here*/
-
+  for (let i = 0; i < numInnings; i++) {
+    let score = {
+      home: inning(numInnings),
+      away: inning(numInnings)
+    }
+    return score;
+  }
 }
+
+console.log('This is for Task 3:', finalScore(inning, 9));
 
 /* Task 4: 
 
