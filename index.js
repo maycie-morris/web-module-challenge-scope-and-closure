@@ -59,12 +59,10 @@ function counter2() {
 Write a function called `inning` that returns a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
 function inning() {
-  min = Math.ceil(0);
-  max = Math.floor(2);
-  return Math.floor(Math.random() * (2 - 0 + 1));
-
+  return Math.floor(Math.random() * Math.floor(3));
 }
-console.log('This is for task 2:', inning());
+
+console.log('This is for task 2:', inning())
 
 
 /* Task 3: finalScore()
