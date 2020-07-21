@@ -32,8 +32,12 @@ function processFirstItem(stringList, callback) {
  * 
  * 2. Which of the two uses a closure? How can you tell?
  * 
+ *  The first function uses closer because the count variable is located inside of the function whereas it is located outside of the function of the second.
+ * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
- *
+ * 
+ * Counter 1 would be preferable in the case of wanting to keep track of a number and add one to it each time while also remembering what the previous count number was. Counter 2 is preferable if we just wanted to add 1 to 0.
+ * 
 */
 
 // counter1 code
@@ -80,17 +84,17 @@ finalScore(inning, 9) might return:
 */
 
 function finalScore(inning, numInnings) {
-  let home = 0;
-  let away = 0;
-
-  for (let i = 0; i < numInnings; i++) {
-    let score = {
-      home: inning(numInnings),
-      away: inning(numInnings)
-    }
-    return score;
+  let score = {
+    'Home': 0,
+    'Away': 0
   }
+  for (let i = 0; i < numInnings; i++) {
+    score.Home += inning();
+    score.Away += inning();
+  }
+  return score;
 }
+
 
 console.log('This is for Task 3:', finalScore(inning, 9));
 
@@ -120,3 +124,17 @@ function scoreboard(/* CODE HERE */) {
 }
 
 
+function scoreboard(inScore, inning, number) {
+  let total = {
+    'Home': 0,
+    'Away': 0
+  }
+  for (let i = 1; i <= number; i++) {
+    let score = inScore(inning, 1)
+    total.Home += score.Home;
+    total.Away += score.Away;
+    console.log(`Inning ${i}: Away ${total.Away} - Home${total.Home}`)
+  }
+  return `Final Score Home ${total.Home} - Away ${total.Away}`
+}
+console.log(scoreboard(finalScore, inning, 9))
