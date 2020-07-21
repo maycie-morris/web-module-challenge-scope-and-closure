@@ -42,6 +42,9 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+
+    A closure is a function that is found within another function.
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -63,8 +66,16 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
+The closure in this code is the return function inside of personalDice. I can tell because the function is nested inside of another.
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
+Dans name is always the same, and the dice roll number is what could change.
+
 c. What is the lexical scope of `newRoll`? 
+
+The lexical scope of `newroll` is the function being returned.
 
 ### Task 2c - Exit Ticket
 
